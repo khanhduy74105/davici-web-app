@@ -1,0 +1,94 @@
+@use '../../../../scss/' as *;
+
+.adminedit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 80%;
+    border: 1px solid black;
+    background-color: rgb(227, 227, 156);
+    @include flex(center, center);
+    form {
+        width: 80%;
+        padding: 20px;
+        font-family: $font-family;
+        .form-group {
+            width: 100%;
+            @include flex(center,flex-start );
+            padding: 10px 0;
+            label {
+                min-width: 80px;
+                width: 140px;
+            }
+            input {
+                padding: 6px;
+                width: 80%;
+                font-family: $font-family;
+
+            }
+            textarea {
+                height: 100px;
+                width: 80%;
+                padding: 10px;
+                font-family: $font-family;
+            }
+            input#imgsInput {
+                display: none;
+            }
+            label[for='imgsInput'] {
+                background-color: $main-color;
+                width: fit-content;
+                text-align: center;
+                border-radius: 5px;
+                padding: 4px;
+                color: white;
+
+                &:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            #img__preview {
+                width: 80%;
+                @include flex(center, flex-start);
+                flex-wrap: wrap;
+                background-color: white;
+                img {
+                    width: 100px;
+                    border: 1px solid black;
+                }
+            }
+
+            button {
+                margin: auto;
+                padding: 4px 12px;
+                background-color: rgb(46, 204, 146);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-family: $font-family;
+                font-size: 18px;
+                &:hover{
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .close__btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 28px;
+        width: 28px;
+        padding: unset;
+        text-align: center;
+        line-height: 28px;
+        background-color: coral;
+    }
+    p{
+        color: rgb(255, 106, 106);
+    }
+}

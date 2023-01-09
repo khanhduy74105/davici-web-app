@@ -1,0 +1,31 @@
+@use '../../scss/' as *;
+
+.bannersite {
+    height: 60vh;
+    width: 100%;
+    background-position: 50% 70%;
+    position: relative;
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        @include flex(center, center);
+        flex-direction: column;
+        h2 {
+            font-size: 52px;
+            text-transform: uppercase;
+            text-shadow: 5px 5px 5px $main-color,-3px -3px 5px rgb(0, 0, 0);
+
+        }
+        a{
+            color: white;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 3px $main-color,-1px -1px 3px black;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}

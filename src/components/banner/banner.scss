@@ -1,0 +1,60 @@
+@use '../../scss/' as * ;
+
+.banner {
+    height: 100vh;
+    position: relative;
+    padding: 100px;
+    background-size: cover;
+
+    &__container {
+        position: relative;
+        height: 100%;
+        >* {
+            position: absolute;
+        }
+        .mid-img{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+        }
+        .left-img {
+            top: 0;
+            right: 0;
+        }
+        p {
+            font-size: 12rem;
+            &.front-text{
+                top: 0;
+                left: 20%;
+            }
+            &.behind-text{
+                bottom: 0;
+                right: 15%;
+            }
+        }
+        
+    }
+
+    &__button {
+        @include flex(center, center);
+        a {
+            @include flex(center, center);
+            border: 1px solid black;
+            color: black;
+            padding: 8px 16px;
+            transition: all 0.3s ease-in;
+            width: auto;
+            span{
+                display: none;
+            }
+            &:hover {
+                color: $main-color;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}

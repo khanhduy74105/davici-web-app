@@ -1,0 +1,73 @@
+.add__product h3 {
+  padding: 20px 0;
+  font-size: 24px;
+}
+.add__product form {
+  padding: 20px;
+  font-family: "Rowdies", cursive;
+}
+.add__product form .form-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+.add__product form .form-group label {
+  min-width: 80px;
+  width: 140px;
+}
+.add__product form .form-group input {
+  padding: 6px;
+  width: 40%;
+  font-family: "Rowdies", cursive;
+}
+.add__product form .form-group textarea {
+  height: 100px;
+  width: 40%;
+  padding: 10px;
+  font-family: "Rowdies", cursive;
+}
+.add__product form .form-group input#imgsInput {
+  display: none;
+}
+.add__product form .form-group label[for=imgsInput] {
+  background-color: rgb(226, 140, 42);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+}
+.add__product form .form-group label[for=imgsInput]:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.add__product form .form-group #img__preview {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.add__product form .form-group #img__preview img {
+  width: 100px;
+  border: 1px solid black;
+}
+.add__product form button {
+  margin: auto;
+  padding: 8px 16px;
+  background-color: rgb(46, 204, 146);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Rowdies", cursive;
+  font-size: 20px;
+}
+.add__product form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}/*# sourceMappingURL=adminadd.css.map */

@@ -1,0 +1,95 @@
+@use '../../scss/' as *;
+
+.shop {
+    width: 100%;
+    padding: 20px 100px;
+    @include flex(flex-start, space-between);
+    *{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    h3{     
+        padding-bottom: 4px;
+    }
+    &__category {
+        width: 15%;
+        // border: 1px solid black;
+        h1{
+            font-weight: lighter;
+            font-size: 18px;
+            @include flex(center, space-between);
+            border-bottom: 1px solid #ccc;
+            padding: 6px 0;
+            i {
+                margin-left: 1rem;
+            }
+        }
+
+        &__type{
+            font-weight: lighter;
+            padding: 6px;
+            border-bottom: 1px solid #ccc;
+            
+            &__group {
+                padding: 4px;
+                label {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        &__price{
+            padding: 6px;
+            input{
+                width: 100%;
+            }
+            button{
+                float: right;
+                color: white;
+                background-color: $main-color;
+            }
+        }
+    }
+    &__products{
+        width: 80%;
+        &__container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 100%;
+        }
+        .pagination{
+            @include flex(center, center);
+            padding: 20px;
+            span{
+                text-transform: uppercase;
+                padding: 4px 8px;
+                background-color: $main-color;
+                border-radius: 4px;
+                font-size: 12px;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+            ul{
+                    margin-right: 8px;
+                    @include flex(center, center);
+                li{
+                    padding: 4px 8px;
+                    background-color: $main-color;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    margin-left: 8px;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.8;
+                }
+                    &.active{
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+}

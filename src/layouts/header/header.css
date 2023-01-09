@@ -1,0 +1,217 @@
+.header {
+  height: 7rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 100px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.header__logo {
+  width: 145px;
+  pointer-events: visible;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav li {
+  position: relative;
+}
+.header__nav li::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+  transition: width 0.3s ease;
+}
+.header__nav li::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+  transition: width 0.3s ease;
+}
+.header__nav li:hover a {
+  color: rgb(226, 140, 42);
+}
+.header__nav li:hover::before, .header__nav li:hover::after {
+  width: 50%;
+}
+.header__nav li ~ li {
+  margin-left: 1rem;
+}
+.header__nav a {
+  text-transform: uppercase;
+}
+.header__search form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 999px;
+  padding: 8px;
+  height: 44px;
+  pointer-events: visible;
+}
+.header__search form input {
+  border: none;
+  height: 100%;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+.header__search form button {
+  border: none;
+  background-color: transparent;
+}
+.header__account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: visible;
+  cursor: pointer;
+  height: 100%;
+}
+.header__account__register {
+  margin-left: 1rem;
+}
+.header__account__register:hover a, .header__account__login:hover a {
+  color: rgb(226, 140, 42);
+}
+.header__account__cart {
+  position: relative;
+}
+.header__account__cart a {
+  display: block;
+  position: relative;
+}
+.header__account__cart a span {
+  font-size: 32px;
+}
+.header__account__cart a div {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  background-color: rgb(226, 140, 42);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.header__account__cart__contain {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: aliceblue;
+  padding: 12px;
+  box-shadow: 2px 3px 3px rgb(241, 213, 142), -2px -2px 3px #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.header__account__cart__contain::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent aliceblue transparent;
+}
+.header__account__cart__contain h1 {
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+  color: rgb(226, 140, 42);
+  font-size: 14px;
+  text-align: left;
+  padding-bottom: 6px;
+}
+.header__account__cart__contain .cart__items {
+  min-width: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.header__account__cart__contain .cart__items > * {
+  margin-right: 10px;
+  width: 100%;
+}
+.header__account__cart__contain .cart__items h5 {
+  text-align: left;
+  font-size: 12px;
+  min-width: 80px;
+}
+.header__account__cart__contain .cart__items img {
+  min-width: 50px;
+  height: 40px;
+}
+.header__account__cart__contain .to__usercart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__account__cart__contain .to__usercart a {
+  text-transform: uppercase;
+  display: block;
+  font-size: 10px;
+  color: rgb(226, 140, 42);
+  padding-top: 10px;
+}
+.header__account__user {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 2rem;
+}
+.header__account__user p {
+  margin-left: 0.5rem;
+}
+.header__account__user img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+.header__account__user__actions {
+  display: none;
+  position: absolute;
+  top: 90%;
+  right: 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 160px;
+}
+.header__account__user__actions a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__account__user__actions a:hover {
+  color: rgb(226, 140, 42);
+}
+.header__account__user__actions.active {
+  display: block;
+}/*# sourceMappingURL=header.css.map */

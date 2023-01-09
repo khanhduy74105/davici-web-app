@@ -1,0 +1,93 @@
+.footer {
+  background-image: linear-gradient(90deg, rgb(244, 243, 242) 3%, rgb(240, 229, 221) 32%, rgb(254, 236, 168) 100%);
+  padding: 40px 100px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.footer__category {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.footer__category__col {
+  min-width: 200px;
+}
+.footer__category__col img {
+  width: 200px;
+}
+.footer__category__col h3 {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.footer__category__col ul {
+  padding-top: 10px;
+}
+.footer__category__col ul li {
+  padding-top: 5px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer__category__col ul li::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+  transition: width 0.3s ease;
+}
+.footer__category__col ul li::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+  transition: width 0.3s ease;
+}
+.footer__category__col ul li:hover::after, .footer__category__col ul li:hover::before {
+  width: 100%;
+}
+.footer__category__col ul li:hover a {
+  color: rgb(226, 140, 42);
+}
+.footer__policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+}
+.footer__policy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+}
+.footer__policy__social {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer__policy__social a {
+  display: block;
+  margin-left: 5px;
+  font-size: 2rem;
+  transition: all 0.3s ease-in;
+}
+.footer__policy__social a:hover {
+  color: steelblue;
+}/*# sourceMappingURL=footer.css.map */

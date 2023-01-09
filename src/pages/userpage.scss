@@ -1,0 +1,180 @@
+@use '../scss/' as *;
+.userpage {
+    margin-top: $header-height;
+    padding: 20px 100px;
+    min-height: 100vh;
+    @include flex(flex-start, space-between);
+    .userpage__leftside{
+        width: 20%;
+        .user__container{
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            &__img{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                position: relative;
+                border-radius: 999px;
+                overflow: hidden;
+                &:hover{
+                    border: 2px dashed black;
+                    .changeimg__layout{
+                        display: flex;
+                    }
+                }
+                .changeimg__layout{
+                    display: none;
+                    width: inherit;
+                    height: inherit;
+                    font-size: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba($color: #000000, $alpha: .2);
+                    label{
+                        cursor: pointer;
+                    }
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .user__behavior{
+            li{
+                padding: 6px;
+                cursor: pointer;
+                i{
+                    margin-right: 4px;
+                }
+            }
+            li.active{
+                color: $main-color;
+            }
+        }
+    }
+    &__rightside{
+        width: 80%;
+        background-color: white;
+        padding: 20px;
+        &__infomation{
+
+            .info__header{
+                margin: 10px 0;
+                p{
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 14px;
+                    text-decoration: underline;
+                    font-style: italic;
+                    cursor: pointer;
+                    color: $main-color;
+                }
+            }
+        }
+        form {
+            .form__group{
+                width: 100%;
+                max-width: 500px;
+                @include flex(center, space-between);
+                padding: 5px 0;
+                label{
+                    width: 20%;
+                    font-size: 14px;
+                }
+                input{
+                    height: 26px;
+                    padding: 4px;
+                    width: 80%;
+                }
+            }
+
+            button {
+                background-color: $main-color;
+                color: white;
+            }
+        }
+
+        .handle__errors{
+            p{
+                color: red;
+                font-weight: 200;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+        &__order{
+            .order__controll{
+                @include flex(center, flex-start);
+                li{
+                    min-width: fit-content;
+                    width: 120px;
+                    position: relative;
+                    cursor: pointer;
+                    padding: 4px 8px;
+                    &.active{
+                        color: $main-color;
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background-color: $main-color;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            
+                        }
+                    }
+                }
+            }
+            .order__container{
+                margin-top: 20px;
+                .order__container__detail{
+                    padding: 16px;
+                    margin: 10px 0;
+                    &.waiting{
+                        background-color: antiquewhite;
+                    }
+                    &.confirmed{
+                        background-color: rgb(231, 250, 215);
+                    }
+                    &.canceled{
+                        background-color: rgb(248, 206, 199);
+                    }
+                    &.done{
+                        background-color: rgb(206, 251, 206);
+                    }
+                    h4{
+                        position: relative;
+                        border-bottom: 2px solid #ccc;
+                    }
+                    &__layout{
+                        padding: 10px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        div{
+                            text-align: center;
+                        }
+                    }
+                    p{
+                        padding: 10px 0;
+                    }
+                    h3{
+                        font-size: 14px;
+                        color: red;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

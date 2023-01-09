@@ -1,0 +1,71 @@
+ @use '../../../../scss/' as *;
+ 
+ .admincontrol {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    table{
+
+        width: 100%;
+        border-collapse: collapse;
+        th, td {
+            padding: 10px 6px;
+            border: 1px solid #ccc;
+        }
+        td{
+            vertical-align: top;
+            max-width: 30%;
+            max-height: 20%;
+        
+                text-align: center;
+                img{
+                    width: 300px;
+                    height: 200px;
+                }
+            
+            .delete__button{
+                color: white;
+                background-color: rgba(211, 32, 26, 0.822);
+            }
+
+            .edit__button {
+                color: white;
+                background-color: rgb(21, 155, 99);
+            }
+        }
+    }
+
+    .pagination{
+        @include flex(center, center);
+        padding: 20px;
+        span{
+            text-transform: uppercase;
+            padding: 4px 8px;
+            background-color: $main-color;
+            border-radius: 4px;
+            font-size: 12px;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+        ul{
+                margin-right: 8px;
+                @include flex(center, center);
+            li{
+                padding: 4px 8px;
+                background-color: $main-color;
+                border-radius: 4px;
+                font-size: 12px;
+                margin-left: 8px;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+            }
+                &.active{
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+ }

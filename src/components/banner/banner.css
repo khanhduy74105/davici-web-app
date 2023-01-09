@@ -1,0 +1,58 @@
+.banner {
+  height: 100vh;
+  position: relative;
+  padding: 100px;
+  background-size: cover;
+}
+.banner__container {
+  position: relative;
+  height: 100%;
+}
+.banner__container > * {
+  position: absolute;
+}
+.banner__container .mid-img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+}
+.banner__container .left-img {
+  top: 0;
+  right: 0;
+}
+.banner__container p {
+  font-size: 12rem;
+}
+.banner__container p.front-text {
+  top: 0;
+  left: 20%;
+}
+.banner__container p.behind-text {
+  bottom: 0;
+  right: 15%;
+}
+.banner__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  color: black;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in;
+  width: auto;
+}
+.banner__button a span {
+  display: none;
+}
+.banner__button a:hover {
+  color: rgb(226, 140, 42);
+}
+.banner__button a:hover span {
+  display: block;
+}/*# sourceMappingURL=banner.css.map */

@@ -1,0 +1,167 @@
+.contact {
+  margin-top: 7rem;
+}
+.contact__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+  background-attachment: fixed;
+  color: white;
+}
+.contact__banner h3 {
+  font-size: 40px;
+}
+.contact__banner p a {
+  color: white;
+  font-size: 18px;
+  text-shadow: 2px 2px 3px white;
+}
+.contact__banner p a:last-child {
+  color: rgb(226, 140, 42);
+}
+.contact__board {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 100px;
+  gap: 20px;
+}
+.contact__board__left {
+  width: 30%;
+  min-height: 450px;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contact__board__left__header {
+  position: relative;
+}
+.contact__board__left__header::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+}
+.contact__board__left__header h5 {
+  text-transform: uppercase;
+  color: rgb(226, 140, 42);
+}
+.contact__board__left__header h4 {
+  text-transform: capitalize;
+  font-size: 28px;
+}
+.contact__board__left__brief {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+}
+.contact__board__left__social h3 {
+  margin-bottom: 10px;
+  position: relative;
+}
+.contact__board__left__social h3::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: rgb(226, 140, 42);
+}
+.contact__board__left__social > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact__board__left__social > div a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid black;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__board__right {
+  min-height: 450px;
+  width: 70%;
+}
+.contact__sendmail {
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact__sendmail h3 {
+  font-size: 28px;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 20px;
+}
+.contact__sendmail h3::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 50px;
+  background-color: rgb(226, 140, 42);
+}
+.contact__sendmail form {
+  max-width: 800px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact__sendmail form > div {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.contact__sendmail form > div div {
+  width: 50%;
+  padding: 10px;
+  margin: -10px;
+}
+.contact__sendmail form > div div input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+.contact__sendmail form > div textarea {
+  padding: 10px;
+  font-family: "Rowdies", cursive;
+  width: 100%;
+  font-size: 20px;
+}
+.contact__sendmail form button {
+  width: calc(100% - 20px);
+  height: 40px;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(226, 140, 42);
+  outline: none;
+  border: none;
+  font-size: 22px;
+}
+.contact__sendmail form p {
+  font-size: 14px;
+  color: red;
+}/*# sourceMappingURL=contact.css.map */

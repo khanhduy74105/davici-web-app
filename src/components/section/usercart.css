@@ -1,0 +1,102 @@
+.usercart {
+  padding: 20px 100px;
+  margin-top: 100px;
+  position: relative;
+}
+.usercart__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.usercart__table tr {
+  width: inherit;
+  border: 1px solid #ccc;
+}
+.usercart__table th, .usercart__table td {
+  text-align: center;
+  padding: 4px;
+}
+.usercart__table td a.td__name:hover {
+  color: rgb(226, 140, 42);
+}
+.usercart__table td.td__img {
+  width: 30%;
+}
+.usercart__table td.td__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  width: 50%;
+  height: auto;
+  max-height: 120px;
+}
+.usercart__table .quanlity__ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.usercart__total {
+  padding: 20px;
+  float: right;
+}
+.usercart__total button {
+  color: rgb(226, 140, 42);
+  background-color: aquamarine;
+}
+.usercart .checkout__layout {
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usercart .checkout__layout .cartcheckout {
+  padding: 20px;
+  background-color: aliceblue;
+  min-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.usercart .checkout__layout .cartcheckout__form {
+  width: 100%;
+  padding: 20px;
+}
+.usercart .checkout__layout .cartcheckout__form__group {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.usercart .checkout__layout .cartcheckout__form__group input {
+  min-width: 80%;
+  height: 30px;
+  padding: 4px;
+}
+.usercart .checkout__layout .cartcheckout__form__group select {
+  width: 25%;
+  height: 30px;
+  padding: 4px;
+}
+.usercart .checkout__layout .cartcheckout__table {
+  width: 100%;
+  background-color: bisque;
+  border-collapse: collapse;
+}
+.usercart .checkout__layout .cartcheckout__table tr {
+  width: inherit;
+  padding: 2px;
+}
+.usercart .checkout__layout .cartcheckout__table td, .usercart .checkout__layout .cartcheckout__table th {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.usercart .checkout__layout .cartcheckout__table button {
+  margin: 10px;
+}/*# sourceMappingURL=usercart.css.map */

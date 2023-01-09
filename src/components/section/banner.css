@@ -1,0 +1,30 @@
+.bannersite {
+  height: 60vh;
+  width: 100%;
+  background-position: 50% 70%;
+  position: relative;
+}
+.bannersite__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bannersite__content h2 {
+  font-size: 52px;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 5px rgb(226, 140, 42), -3px -3px 5px rgb(0, 0, 0);
+}
+.bannersite__content a {
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 3px rgb(226, 140, 42), -1px -1px 3px black;
+}
+.bannersite__content a:hover {
+  color: rgb(226, 140, 42);
+}/*# sourceMappingURL=banner.css.map */

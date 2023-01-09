@@ -1,0 +1,52 @@
+@use "../../../../scss/" as *;
+.orders__layout {
+  padding: 20px;
+  width: 100%;
+  > h3 {
+    font-size: 20px;
+    font-weight: 300px;
+  }
+  > h4 {
+    font-size: 16px;
+    font-weight: 200px;
+    text-transform: uppercase;
+  }
+  background-color: beige;
+  .container > table {
+    width: 100%;
+    border-collapse: collapse;
+    th,
+    td {
+      font-size: 14px;
+      vertical-align: top;
+      border: 1px solid #ccc;
+      padding: 4px;
+      text-align: center;
+      .order__products {
+        min-width: 120px;
+        position: relative;
+        @include flex(center, space-between);
+        padding: 0 10px;
+        span:nth-child(2) {
+          color: $main-color;
+          cursor: pointer;
+        }
+
+        .order__view {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: beige;
+          z-index: 10;
+          &.show{
+            display: block;
+          }
+          table{
+            min-width: 400px;
+          }
+        }
+      }
+    }
+  }
+}

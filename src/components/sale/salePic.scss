@@ -1,0 +1,69 @@
+@use '../../scss/' as * ;
+
+.sale {
+    @include flex(center, space-between);
+    padding: 30px 100px;
+    &__item {
+        background-size: 100% 100%;
+        background-position: center;
+        position: relative;
+        $width: 420px;
+        width: $width;
+        height: calc($width * 3 / 4);
+        transition: background-size 0.3s ease;
+        &:hover{
+            background-size: 120% 120%;
+        }
+        &__content{
+            font-weight: 400;
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+            h6 {
+                color: rgb(140, 140, 140);
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+
+            a {
+                width: fit-content;
+                padding: 8px 0;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: black;
+                    transition: width 0.3s ease;
+                }
+                &:hover {
+                    color: $main-color
+                }
+                &:hover::after{
+                    background-color: $main-color;
+                    width: 50%;
+                }
+            }
+        }
+        &__content.left {
+            text-align: left;
+            left: 0;
+
+            a::after{
+                left: 0;
+            }
+        }
+        &__content.right {
+            text-align: right;
+            right: 0;
+
+            a::after{
+                right: 0;
+            }
+        }
+    }
+}

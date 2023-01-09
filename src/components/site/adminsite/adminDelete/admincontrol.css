@@ -1,0 +1,68 @@
+.admincontrol {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+.admincontrol table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admincontrol table th, .admincontrol table td {
+  padding: 10px 6px;
+  border: 1px solid #ccc;
+}
+.admincontrol table td {
+  vertical-align: top;
+  max-width: 30%;
+  max-height: 20%;
+  text-align: center;
+}
+.admincontrol table td img {
+  width: 300px;
+  height: 200px;
+}
+.admincontrol table td .delete__button {
+  color: white;
+  background-color: rgba(211, 32, 26, 0.822);
+}
+.admincontrol table td .edit__button {
+  color: white;
+  background-color: rgb(21, 155, 99);
+}
+.admincontrol .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.admincontrol .pagination span {
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background-color: rgb(226, 140, 42);
+  border-radius: 4px;
+  font-size: 12px;
+}
+.admincontrol .pagination span:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.admincontrol .pagination ul {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admincontrol .pagination ul li {
+  padding: 4px 8px;
+  background-color: rgb(226, 140, 42);
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+.admincontrol .pagination ul li:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.admincontrol .pagination ul li.active {
+  background-color: #ccc;
+}/*# sourceMappingURL=admincontrol.css.map */

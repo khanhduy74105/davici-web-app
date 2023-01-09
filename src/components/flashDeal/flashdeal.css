@@ -1,0 +1,55 @@
+.flashdeal {
+  width: 100vw;
+  height: 65vh;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+.flashdeal .title-side {
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 4px;
+}
+.flashdeal .title-side span {
+  transform: rotate(90deg);
+}
+.flashdeal__content {
+  width: 50%;
+  padding: 40px;
+}
+.flashdeal__content h3 {
+  font-size: 24px;
+  padding: 5px 0;
+}
+.flashdeal__content div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flashdeal__content a {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+.flashdeal__content a:hover {
+  border-color: white;
+  background-color: rgb(226, 140, 42);
+  color: white;
+}/*# sourceMappingURL=flashdeal.css.map */

@@ -1,0 +1,48 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.center-container img {
+  width: 200px;
+}
+.center-container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.center-container form p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  padding: 16px;
+}
+.center-container form p input {
+  padding: 8px;
+  width: 70%;
+  height: 36px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.center-container form div a:hover {
+  color: rgb(226, 140, 42);
+}
+.center-container form button {
+  margin: 10px;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: rgb(66, 213, 164);
+}
+.center-container form button:hover {
+  background-color: aquamarine;
+  color: rgb(226, 140, 42);
+  cursor: pointer;
+}/*# sourceMappingURL=login.css.map */

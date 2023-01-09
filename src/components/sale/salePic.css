@@ -1,0 +1,67 @@
+.sale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.sale__item {
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+  width: 420px;
+  height: 315px;
+  transition: background-size 0.3s ease;
+}
+.sale__item:hover {
+  background-size: 120% 120%;
+}
+.sale__item__content {
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+.sale__item__content h6 {
+  color: rgb(140, 140, 140);
+  font-size: 14px;
+}
+.sale__item__content h3 {
+  font-size: 24px;
+}
+.sale__item__content a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 0;
+  position: relative;
+}
+.sale__item__content a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+.sale__item__content a:hover {
+  color: rgb(226, 140, 42);
+}
+.sale__item__content a:hover::after {
+  background-color: rgb(226, 140, 42);
+  width: 50%;
+}
+.sale__item__content.left {
+  text-align: left;
+  left: 0;
+}
+.sale__item__content.left a::after {
+  left: 0;
+}
+.sale__item__content.right {
+  text-align: right;
+  right: 0;
+}
+.sale__item__content.right a::after {
+  right: 0;
+}/*# sourceMappingURL=salePic.css.map */

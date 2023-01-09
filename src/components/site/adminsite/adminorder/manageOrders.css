@@ -1,0 +1,57 @@
+.orders__layout {
+  padding: 20px;
+  width: 100%;
+  background-color: beige;
+}
+.orders__layout > h3 {
+  font-size: 20px;
+  font-weight: 300px;
+}
+.orders__layout > h4 {
+  font-size: 16px;
+  font-weight: 200px;
+  text-transform: uppercase;
+}
+.orders__layout .container > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.orders__layout .container > table th,
+.orders__layout .container > table td {
+  font-size: 14px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;
+}
+.orders__layout .container > table th .order__products,
+.orders__layout .container > table td .order__products {
+  min-width: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.orders__layout .container > table th .order__products span:nth-child(2),
+.orders__layout .container > table td .order__products span:nth-child(2) {
+  color: rgb(226, 140, 42);
+  cursor: pointer;
+}
+.orders__layout .container > table th .order__products .order__view,
+.orders__layout .container > table td .order__products .order__view {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: beige;
+  z-index: 10;
+}
+.orders__layout .container > table th .order__products .order__view.show,
+.orders__layout .container > table td .order__products .order__view.show {
+  display: block;
+}
+.orders__layout .container > table th .order__products .order__view table,
+.orders__layout .container > table td .order__products .order__view table {
+  min-width: 400px;
+}/*# sourceMappingURL=manageOrders.css.map */
