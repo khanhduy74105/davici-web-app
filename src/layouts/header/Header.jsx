@@ -125,7 +125,7 @@ const Header = ({fixed}) => {
 
               <div className="header__account__user" onClick={onClick}>
                 <img
-                  src={`${apiUrl}/${user.avatar}`}
+                  src={`${apiUrl}/${user.avatar} || ${user.avatar}`}
                   alt=""
                 />
                 <p>{user.username}</p>

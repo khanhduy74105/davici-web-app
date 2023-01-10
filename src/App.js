@@ -20,6 +20,8 @@ import Cart from "./pages/Cart";
 import UserPage from "./pages/UserPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ToTop from "./components/toTop/ToTop";
+import RegisterForm from "./components/auth/RegisterForm";
 function App() {
 
   return (
@@ -36,10 +38,12 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path='/login' element={<ProtectRoute />}/>
+            <Route path='/register' element={<RegisterForm />}/>
             <Route path='/admin' element={<AdminSite />}/>
           </Routes>
         </BrowserRouter>
         <ToastMess />
+        <ToTop />
       </AuthContextProvider>
 
     </Provider>

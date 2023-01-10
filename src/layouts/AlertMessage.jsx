@@ -1,8 +1,8 @@
 
 const AlertMessage = (props) => {
     const {message} = props
-  return (message?
-    <div style={{color: 'red', textAlign: 'center',}}>{message}</div>:''
+  return (
+    <div style={{color: 'red', textAlign: 'center',}}>{message}</div>
   )
 }
 

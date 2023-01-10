@@ -47,13 +47,26 @@ const AuthContextProvider = ({children})=>{
         }
     }
 
-
+    const registerUser = async registerData =>{
+        try {
+            const res = await axios.post(`${apiUrl}/auth/register`, registerData)
+            if (res.data.success) {
+                localStorage.setItem(LOCAL_STORAGE_TOKEN, res.data.accessToken)
+            }
+            await loadUser()
+            return res.data
+        } catch (error) {
+            if (error.response.data) return error.response.data
+            return {success: false, message: error.message}
+        }
+    }
 
     const authContextData = {
         loginUser,
         loadUser,
         toast,
-        setToast
+        setToast,
+        registerUser
     }
 
     return (
