@@ -7,9 +7,9 @@ import { useSelector } from 'react-redux'
 const Product = (props) => {
     const {data} = props
     const {setToast} = useContext(AuthContext)
-    const {isAuthenticated} = useSelector((state) => state.auth)
+    const {isAuthenticate} = useSelector((state) => state.auth)
     const addToCart = async (id) =>{
-        if (isAuthenticated) {
+        if (isAuthenticate) {
             try {
                 const res = await axios.post(`${apiUrl}/cart/add/${id}`, {quanlity: 1})
                 if (res.data.success) {

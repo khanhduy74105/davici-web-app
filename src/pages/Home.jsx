@@ -6,12 +6,10 @@ import Footer from "../components/footer/Footer"
 import NewArrival from "../components/newArrival/NewArrival"
 import SalePic from "../components/sale/SalePic"
 import BannerSection from "../components/section/BannerSection"
-import ToastMess from "../components/toastmessage/ToastMess"
 import Header from "../layouts/header/Header"
 
 const Home = () => {
-  const {isAuthenticate, user} = useSelector(state => state.auth)
-  console.log(user);
+  const { user} = useSelector(state => state.auth)
   let Home
   Home =(
     <>

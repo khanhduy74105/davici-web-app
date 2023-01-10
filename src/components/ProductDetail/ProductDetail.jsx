@@ -15,7 +15,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/authContext";
 const ProductDetail = (props) => {
   const { setToast } = useContext(AuthContext);
-  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const { isAuthenticate, user } = useSelector((state) => state.auth);
   const { productid } = useParams();
   const [productData, setProductData] = useState({
     loading: true,
@@ -39,7 +39,6 @@ const ProductDetail = (props) => {
     try {
       const res = await axios.get(`${apiUrl}/get/${productid}`);
       if (res.data.success) {
-        console.log(res.data.listRate);
         setProductData({
           loading: false,
           details: res.data.data,
@@ -93,12 +92,11 @@ const ProductDetail = (props) => {
         rate: star,
         content: commentText,
       };
-      if (isAuthenticated) {
+      if (isAuthenticate) {
         const res = await axios.post(
           `${apiUrl}/user/comment/${productid}`,
           commentContent
         );
-        console.log(res);
       } else {
         setToast({ success: false, message: "You need log in to coment" });
       }
@@ -125,7 +123,7 @@ const ProductDetail = (props) => {
   const [amountProduct, setAmountProduct] = useState(1);
   const addProduct = async () => {
     try {
-      if (isAuthenticated) {
+      if (isAuthenticate) {
         const res = await axios.post(`${apiUrl}/cart/add/${productid}`, {
           quanlity: amountProduct,
         });

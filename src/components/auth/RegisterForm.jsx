@@ -19,13 +19,15 @@ const RegisterForm = () => {
     const {handleSubmit, register, formState: {errors}} = useForm({
         resolver: yupResolver(schema)
     })
-    const onRegister =async (data)=>{
+    const onRegister = async (data)=>{
+        const registerData = {
+            username: data.username,
+            password: data.password
+        }
         try {
-            const {username, password} = data 
-            const res = await registerUser({username, password})
-            console.log(res);
+            const res = await registerUser(registerData)
             if (res.success) {
-                setAlert(res.message)
+                window.location.href = '/login';
             }
         } catch (error) {
             setAlert('Error')

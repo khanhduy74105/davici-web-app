@@ -125,7 +125,7 @@ const Header = ({fixed}) => {
 
               <div className="header__account__user" onClick={onClick}>
                 <img
-                  src={`${apiUrl}/${user.avatar} || ${user.avatar}`}
+                  src={`${apiUrl}/${user.avatar}` || `${user.avatar}`}
                   alt=""
                 />
                 <p>{user.username}</p>
@@ -152,7 +152,7 @@ const Header = ({fixed}) => {
                 <a href="/login">Login</a>
               </div>
               <div className="header__account__register">
-                <a href="/register">register</a>
+                <a href="/register">Register</a>
               </div>
             </>
           )}

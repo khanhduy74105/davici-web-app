@@ -16,7 +16,6 @@ const ProductsShop = () => {
       const getProducts =async ()=>{
         const res = await axios.get(`${apiUrl}/getproductshop/${curPage}`)
         setProducts({isLoading: false, data:res.data.data})
-        console.log(res.data);
         setPages(res.data.pages)
     }
     const renderPagination =(pages) =>{

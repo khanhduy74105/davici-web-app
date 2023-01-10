@@ -49,7 +49,6 @@ const UserPage = () => {
             username: user.username
           }
       });
-    // console.log(user);
     const [leftBehavior, setLeftBehavior] = useState('order')
     const [orders, setOrders] = useState(null)
     const [orderType, setOrderType] = useState('all')
@@ -86,7 +85,6 @@ const UserPage = () => {
         try {
             const res = await axios.post(`${apiUrl}/user/changeavt`, formData);
             setToast(res.data)
-            console.log(res.data);
         } catch (error) {
             
         }
