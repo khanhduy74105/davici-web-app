@@ -3,6 +3,9 @@
     margin-top: $header-height;
     padding: 20px 100px;
     min-height: 100vh;
+    @media (max-width: 700px){
+        padding: 20px;
+    }
     @include flex(flex-start, space-between);
     .userpage__leftside{
         width: 20%;
@@ -64,7 +67,7 @@
     &__rightside{
         width: 80%;
         background-color: white;
-        padding: 20px;
+        padding: 0 20px;
         &__infomation{
 
             .info__header{

@@ -1,214 +1,223 @@
-@use '../../scss/' as * ;
-.header{
-    height: $header-height;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 0 100px;
-    &__inner {
-        @include flex(center, space-between);
-        height: 100%;
+@use "../../scss/" as *;
+.header {
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 100px;
 
+  &__inner {
+    @include flex(center, space-between);
+    height: 100%;
+  }
+  &__logo {
+    width: 145px;
+    pointer-events: visible;
+    @media (max-width: 700px){
+        display: none;
+      }
+    img {
+      width: 100%;
     }
-    &__logo{
-        width: 145px;
-        pointer-events: visible;
+  }
 
-        img{
+  &__nav {
+    @include flex(center, space-between);
+    
+    li {
+      position: relative;
+    }
+    li::before {
+      content: "";
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background-color: $main-color;
+      transition: width 0.3s ease;
+    }
+    li::after {
+      content: "";
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      background-color: $main-color;
+      transition: width 0.3s ease;
+    }
+    li:hover a {
+      color: $main-color;
+    }
+    li:hover::before,
+    li:hover::after {
+      width: 50%;
+    }
+    li ~ li {
+      margin-left: 1rem;
+    }
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+  &__search{
+    @media (max-width: 700px){
+        display: none;
+      }
+  }
+  &__search form {
+    @include flex(center, space-between);
+    border: 2px solid black;
+    border-radius: 999px;
+    padding: 8px;
+    height: 44px;
+    pointer-events: visible;
+    @media (max-width: 700px) {
+        display: none;
+    }
+    input {
+      border: none;
+      height: 100%;
+      outline: none;
+      font-size: 1.2rem;
+      background-color: transparent;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  &__account {
+    @include flex(center, space-between);
+    pointer-events: visible;
+    cursor: pointer;
+    height: 100%;
+    &__register {
+      margin-left: 1rem;
+    }
+    &__register:hover a,
+    &__login:hover a {
+      color: $main-color;
+    }
+
+    &__cart {
+      position: relative;
+
+      a {
+        display: block;
+        position: relative;
+        span {
+          font-size: 32px;
+        }
+        div {
+          position: absolute;
+          top: -12px;
+          right: -10px;
+          background-color: $main-color;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          border-radius: 50%;
+        }
+      }
+      &__contain {
+        width: fit-content;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: aliceblue;
+        padding: 12px;
+        box-shadow: 2px 3px 3px rgb(241, 213, 142), -2px -2px 3px #ccc;
+        max-height: 200px;
+        overflow-y: auto;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: 0;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent aliceblue transparent;
+        }
+        h1 {
+          border-bottom: 1px solid #ccc;
+          white-space: nowrap;
+          color: $main-color;
+          font-size: 14px;
+          text-align: left;
+          padding-bottom: 6px;
+        }
+        .cart__items {
+          min-width: 240px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 10px;
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+          > * {
+            margin-right: 10px;
             width: 100%;
+          }
+          h5 {
+            text-align: left;
+            font-size: 12px;
+            min-width: 80px;
+          }
+          img {
+            min-width: 50px;
+            height: 40px;
+          }
         }
-    }
-
-    &__nav {
-        @include flex(center, space-between);
-        li{
-            position: relative;
-        }
-        li::before{
-            content: '';
-            width: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 2px;
-            background-color: $main-color;
-            transition: width 0.3s ease;
-        }
-        li::after{
-            content: '';
-            width: 0;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 2px;
-            background-color: $main-color;
-            transition: width 0.3s ease;
-
-        }
-        li:hover a{
-            color: $main-color;
-        }
-        li:hover::before,li:hover::after {
-            width: 50%;
-        }
-        li ~ li {
-            margin-left: 1rem;
-
-        }
-
-        a{
+        .to__usercart {
+          @include flex(center, center);
+          a {
             text-transform: uppercase;
-        }
-    }
-
-    &__search form{
-        @include flex(center, space-between);
-        border: 2px solid black;
-        border-radius: 999px;
-        padding: 8px;
-        height: 44px;
-        pointer-events: visible;
-        
-        input {
-            border: none;
-            height: 100%;
-            outline: none;
-            font-size: 1.2rem;
-            background-color: transparent;
-        }
-         button {
-            border: none;
-            background-color: transparent;
-         }
-    }
-
-    &__account {
-        @include flex(center, space-between);
-        pointer-events: visible;
-        cursor: pointer;
-        height: 100%;
-        &__register {
-            margin-left: 1rem;
-        }
-        &__register:hover a,&__login:hover a{
+            display: block;
+            font-size: 10px;
             color: $main-color;
+            padding-top: 10px;
+          }
         }
-
-        &__cart {
-            position: relative;
-            
-            a {
-                display: block;
-                position: relative;
-                span{
-                    font-size: 32px;
-                }
-                div {
-                    position: absolute;
-                    top: -12px;
-                    right: -10px;
-                    background-color: $main-color;
-                    width: 20px;
-                    height: 20px;
-                    text-align: center;
-                    border-radius: 50%;
-                }
-            }
-            &__contain{
-                width: fit-content;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                background-color: aliceblue;
-                padding: 12px;
-                box-shadow: 2px 3px 3px rgb(241, 213, 142),-2px -2px 3px #ccc;
-                max-height: 200px;
-                overflow-y: auto;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: -20px;
-                    right: 0;
-                    border-width: 10px;
-                    border-style: solid;
-                    border-color: transparent transparent aliceblue transparent;
-                }
-                h1{
-                    border-bottom: 1px solid #ccc;
-                    white-space: nowrap;
-                    color: $main-color;
-                    font-size: 14px;
-                    text-align: left;
-                    padding-bottom: 6px;
-                }
-                .cart__items{
-                    min-width: 240px;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    gap: 10px;
-                    padding: 10px;
-                    border-bottom: 1px solid #ccc;
-                    >*{
-                        margin-right: 10px;
-                        width: 100%;
-                    }
-                    h5{
-                        text-align: left;
-                        font-size: 12px;
-                        min-width: 80px;
-                    }
-                    img{
-                        min-width: 50px;
-                        height: 40px;
-                    }
-                }
-                .to__usercart{
-                    @include flex(center, center);
-                    a{
-                        text-transform: uppercase;
-                        display: block;
-                        font-size: 10px;
-                        color: $main-color;
-                        padding-top: 10px;
-                    }
-                }
-            }
-        }
-
-        &__user {
-            height: 100%;
-            @include flex(center, space-between);
-            position: relative;
-            margin-left: 2rem;
-            p{
-                margin-left: 0.5rem;
-            }
-            img {
-                height: 36px;
-                width: 36px;
-                border-radius: 50%;
-            }
-            &__actions{
-                display: none;
-                position: absolute;
-                top: 90%;
-                right: 0;
-                border: 2px solid black;
-                border-radius: 10px;
-                padding: 10px;
-                width: 160px;
-                a {
-                    @include flex(center, flex-start)
-                }
-                a:hover {
-                    color: $main-color;
-                }
-            }
-            &__actions.active{
-                display: block;
-            }
-        }
+      }
     }
+
+    &__user {
+      height: 100%;
+      @include flex(center, space-between);
+      position: relative;
+      margin-left: 2rem;
+      p {
+        margin-left: 0.5rem;
+      }
+      img {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+      }
+      &__actions {
+        display: none;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        width: 160px;
+        a {
+          @include flex(center, flex-start);
+        }
+        a:hover {
+          color: $main-color;
+        }
+      }
+      &__actions.active {
+        display: block;
+      }
+    }
+  }
 }

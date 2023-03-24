@@ -18,7 +18,7 @@ const FlashDeal = () => {
                 <div className="hour-counter">12 2020</div>
             </div>
             <div>
-                <a href="">Shop now</a>
+                <a href="/shop">Shop now</a>
             </div>
         </div>
     </div>

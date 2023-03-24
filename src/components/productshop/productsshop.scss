@@ -3,6 +3,10 @@
 .shop {
     width: 100%;
     padding: 20px 100px;
+    @media (max-width: 700px) {
+        padding: 20px ;
+        
+    }
     @include flex(flex-start, space-between);
     *{
         font-size: 14px;
@@ -14,6 +18,10 @@
     &__category {
         width: 15%;
         // border: 1px solid black;
+        @media (max-width: 700px) {
+            width: 25%;
+            
+        }
         h1{
             font-weight: lighter;
             font-size: 18px;
@@ -52,11 +60,18 @@
     }
     &__products{
         width: 80%;
+        @media (max-width: 700px) {
+            width: 70%;
+            
+        }
         &__container{
             display: grid;
             gap: 10px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             width: 100%;
+            @media (max-width: 700px) {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         .pagination{
             @include flex(center, center);

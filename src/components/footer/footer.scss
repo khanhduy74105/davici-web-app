@@ -5,14 +5,22 @@
     @include flex(flex-start, center);
     flex-direction: column;
     width: 100%;
+    
+    @media (max-width: 700px) {
+        padding: 40px 20px 20px;
+    }
     &__category{
+        
         @include flex(flex-start, space-between);
         width: 100%;
         padding-bottom: 10px;
         &__col{
-            min-width: 200px;
+            width: 200px;
+            max-width: 25%;
             img{
                 width: 200px;
+                max-width: 100%;
+                padding: 0 10px;
             }
             h3 {
                 font-weight: 200;

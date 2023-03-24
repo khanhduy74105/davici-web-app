@@ -24,6 +24,9 @@
     &__board{
         @include flex(flex-start, center);
         padding: 20px 100px;
+        @media (max-width: 700px){
+            padding: 20px;
+        }
         gap: 20px;
         &__left{
             width: 30%;
@@ -32,6 +35,9 @@
             padding: 20px;
             @include flex(flex-start, space-between);
             flex-direction: column;
+            @media (max-width: 700px){
+                padding: 10px;
+            }
             &__header{
                 position: relative;
                 &::after{
@@ -53,6 +59,7 @@
                 }
             }
             &__brief{
+                word-break: break-all;
                 font-size: 16px;
                 font-weight: 500;
                 font-family: 'Courier New', Courier, monospace;
@@ -93,6 +100,9 @@
     }
     &__sendmail{
         padding: 20px 100px;
+        @media (max-width: 700px){
+            padding: 0;
+        }
         @include flex(center, center);
         flex-direction: column;
         h3{

@@ -2,7 +2,10 @@
 
 .arrivals {
     padding: 20px 100px;
+    @media (max-width: 700px){
+        padding: 20px;
 
+    }
     .title {
         @include flex(center, center);
         padding-bottom: 20px;
@@ -31,5 +34,8 @@
         gap: 10px;
         grid-template-columns: auto auto auto auto;
         width: 100%;
+        @media (max-width: 700px){
+            grid-template-columns: auto auto;
+        }
     }
 }
