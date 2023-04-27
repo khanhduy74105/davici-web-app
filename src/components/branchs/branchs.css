@@ -1,6 +1,11 @@
 .brands {
   padding: 20px 100px;
 }
+@media (max-width: 700px) {
+  .brands {
+    padding: 20px;
+  }
+}
 .brands .title {
   display: flex;
   align-items: center;
@@ -13,7 +18,6 @@
   text-transform: uppercase;
   padding: 10px 0;
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -42,7 +46,15 @@
   align-items: center;
 }
 .brands__layout__item img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 200px;
   height: 150px;
   pointer-events: none;
+}
+@media (max-width: 700px) {
+  .brands__layout__item {
+    height: 150px;
+  }
 }/*# sourceMappingURL=branchs.css.map */

@@ -6,6 +6,11 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+@media (max-width: 700px) {
+  .userpage {
+    padding: 20px;
+  }
+}
 .userpage .userpage__leftside {
   width: 20%;
 }
@@ -65,7 +70,7 @@
 .userpage__rightside {
   width: 80%;
   background-color: white;
-  padding: 20px;
+  padding: 0 20px;
 }
 .userpage__rightside__infomation .info__header {
   margin: 10px 0;
@@ -113,7 +118,6 @@
   justify-content: flex-start;
 }
 .userpage__rightside__order .order__controll li {
-  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   width: 120px;

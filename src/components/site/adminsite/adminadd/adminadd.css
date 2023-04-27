@@ -33,7 +33,6 @@
 }
 .add__product form .form-group label[for=imgsInput] {
   background-color: rgb(226, 140, 42);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;

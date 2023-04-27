@@ -1,0 +1,15 @@
+#totop {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 10%;
+  right: 50px;
+  transform: translateX(50%);
+  background-color: rgb(226, 140, 42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#totop span {
+  color: white;
+}/*# sourceMappingURL=totop.css.map */

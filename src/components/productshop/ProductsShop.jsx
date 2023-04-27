@@ -30,7 +30,7 @@ const ProductsShop = () => {
     },[curPage])
   return (
     <div className='shop'>
-        <div className="shop__category">
+        {/* <div className="shop__category">
             <h1 onClick={() => setCategoryOpen(state=>!state)}>category<i className={`fa-solid fa-angle-${categoryOpen ? 'up':'down'}`}></i></h1>
             <div className="shop__category__type" style={{display: categoryOpen ? 'block' :'none'}}>
                 <h3>types</h3>
@@ -57,7 +57,7 @@ const ProductsShop = () => {
                 <p>0 - {range} $</p>
                 <button className='btn filter-btn'>get</button>
             </div>
-        </div>
+        </div> */}
         <div className="shop__products">
             <div className="shop__products__container">
                 {products.isLoading ? <h6>Loading....</h6> : products.data.map((product, index)=>{

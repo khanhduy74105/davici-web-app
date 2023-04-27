@@ -17,6 +17,11 @@
   width: 145px;
   pointer-events: visible;
 }
+@media (max-width: 700px) {
+  .header__logo {
+    display: none;
+  }
+}
 .header__logo img {
   width: 100%;
 }
@@ -51,7 +56,8 @@
 .header__nav li:hover a {
   color: rgb(226, 140, 42);
 }
-.header__nav li:hover::before, .header__nav li:hover::after {
+.header__nav li:hover::before,
+.header__nav li:hover::after {
   width: 50%;
 }
 .header__nav li ~ li {
@@ -59,6 +65,11 @@
 }
 .header__nav a {
   text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  .header__search {
+    display: none;
+  }
 }
 .header__search form {
   display: flex;
@@ -69,6 +80,11 @@
   padding: 8px;
   height: 44px;
   pointer-events: visible;
+}
+@media (max-width: 700px) {
+  .header__search form {
+    display: none;
+  }
 }
 .header__search form input {
   border: none;
@@ -116,7 +132,6 @@
   border-radius: 50%;
 }
 .header__account__cart__contain {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;

@@ -135,7 +135,7 @@ const Header = ({fixed}) => {
                   }`}
                 >
                   <li>
-                    <a href="">Your Account</a>
+                    <a href="/user">Your Account</a>
                   </li>
                   <li>
                     <a href="" onClick={handleLogout}>
